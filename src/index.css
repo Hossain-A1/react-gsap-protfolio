@@ -44,7 +44,8 @@ body{
   background-color: var(--color-gray);
   min-height: 100vh;
   margin: 1%;
-  border-radius: 20px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 /* primary stayle */
@@ -96,7 +97,7 @@ hr{
 .header .row:nth-child(3) a{
   border-bottom: 1px solid black;  
 }
-.header .row:nth-child(7){
+.header .row:nth-child(6){
   justify-content: center;
 }
 .header .box span:nth-child(2){
@@ -117,4 +118,67 @@ hr{
 }
 .header .skills.box{
   background: linear-gradient(135deg,var(--color-teal) 88%, transparent 12%);
+}
+
+/* projects is here */
+.projects-section{
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.projects-section .title{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+.projects-section .title span{
+  font-family: var(--font-cabin);
+  text-transform: capitalize;
+  font-size: 2vw;
+  font-weight: 200;
+  color: var(--color-deep-darker)
+
+}
+
+.projects-list-wrapper{
+  background-color: var(--color-teal);
+  padding: 6vw 1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.project-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.project-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.project-item span{
+  font-family: var(--font-cabin);
+  text-transform: capitalize;
+  font-size: 2vw;
+  font-weight: 200;
+  color: var(--color-deep-darker)
+}
+.project-titles{
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.project-details{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 1rem;
+  overflow:hidden ;
+}
+ .project-details span:nth-child(1){
+  font-size: 1.5vw;
 }

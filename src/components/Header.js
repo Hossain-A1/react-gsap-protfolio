@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import { useRef } from "react";
 import { useHrForword, useLinkFallDown, useTextUpper,  useBoxBright } from "../hooks/Gsap";
-export const Header = () => {
+ const Header = () => {
 
   const link1 = useRef(null)
   const link2 = useRef(null)
@@ -16,9 +16,8 @@ export const Header = () => {
   const hrRef2 = useRef(null)
   const hrRef3 = useRef(null)
   const hrRef4 = useRef(null)
-  const hrRef5 = useRef(null)
 
-  const hrArr = [hrRef1,hrRef2,hrRef3,hrRef4,hrRef5]
+  const hrArr = [hrRef1,hrRef2,hrRef3,hrRef4]
   useHrForword(hrArr)
 
   const text1 = useRef(null)
@@ -60,10 +59,9 @@ export const Header = () => {
         >
           Send email
         </a>
-        <Link ref={link4} to="/contact"> Contact me</Link>
+        <Link ref={link4} to="/contact">Contact</Link>
       </div>
 
-      <hr ref={hrRef2}/>
       <div className="row">
         <Link to='/about' className="about box" ref={box1}>
           <span>About</span>
@@ -75,11 +73,11 @@ export const Header = () => {
           <span><BsArrowUpRightCircle/></span>
         </Link>
       </div>
-      <hr ref={hrRef3}/>
+      <hr ref={hrRef2}/>
       <div className="row">
         <h2 ref={text4}><i> react</i> js deve<i>l</i>ope<i>r</i> </h2>
       </div>
-      <hr ref={hrRef4}/>
+      <hr ref={hrRef3}/>
       <div className="row">
         <h2 ref={text5}>based</h2>
         <Link to='/skills' className="skills box" ref={box3}>
@@ -88,7 +86,9 @@ export const Header = () => {
         </Link>
         <h2 ref={text6}>in Saudi arabia</h2>
       </div>
-      <hr ref={hrRef5}/>
+      <hr ref={hrRef4}/>
     </div>
   );
 };
+
+export default Header
